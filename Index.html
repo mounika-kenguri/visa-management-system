@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <​meta charset="UTF-8">
+ <​meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Visa Processing Management System</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header class="topbar">
+ <div class="logo">VisaFlow</div>
+ <nav class="nav">
+ <a href="hashtag#apply">Apply</a>
+ <a href="hashtag#upload">Upload</a>
+ <a href="hashtag#status">Status</a>
+ <a href="hashtag#faq">FAQ</a>
+ </nav>
+ <button class="pill" id="prefill-btn">Load Demo Data</button>
+ </header>
+
+ <main>
+ <section class="hero">
+ <div>
+ <p class="eyebrow">Streamlined Experience</p>
+ <h1>Visa Processing Management System</h1>
+ <p class="lede">Submit applications, upload supporting documents, and track visa status in one simple, modern interface.</p>
+ <div class="hero-actions">
+ <a class="pill primary" href="hashtag#apply">Start Application</a>
+ <a class="pill ghost" href="hashtag#status">Track Status</a>
+ </div>
+ <div class="metrics">
+ <div><span class="metric">4 steps</span><small>From submitted to approved</small></div>
+ <div><span class="metric">24/7</span><small>Self-service portal</small></div>
+ <div><span class="metric">Docs-ready</span><small>Upload and track instantly</small></div>
+ </div>
+ </div>
+ <div class="card highlight">
+ <p class="eyebrow">Live Preview</p>
+ <h2>Track any application</h2>
+ <div class="progress" aria-label="Status steps">
+ <div class="dot active"></div>
+ <div class="dot active"></div>
+ <div class="dot"></div>
+ <div class="dot"></div>
+ </div>
+ <p class="microcopy">Watch each step progress so applicants always know what is next.</p>
+ </div>
+ </section>
+
+ <section id="apply" class="panel">
+ <div class="panel-header">
+ <div>
+ <p class="eyebrow">Step 1</p>
+ <h2>Submit Application</h2>
+ <p class="microcopy">Collect applicant basics with inline validation. Fields are intentionally minimal.</p>
+ </div>
+ <div class="hint">Keep it simple: fill the basics and submit in minutes.</div>
+ </div>
+ <form id="application-form" class="grid two" novalidate>
+ <label>Full Name
+ <input type="text" name="fullName" placeholder="Aarav Patel" required>
+ </label>
+ <label>Email
+ <input type="email" name="email" placeholder="aarav@example.com" required>
+ </label>
+ <label>Passport Number
+ <input type="text" name="passport" placeholder="A1234567" required>
+ </label>
+ <label>Nationality
+ <select name="nationality" required>
+ <option value="">Select</option>
+ <option>India</option>
+ <option>United States</option>
+ <option>Canada</option>
+ <option>United Kingdom</option>
+ <option>Australia</option>
+ <option>Germany</option>
+ </select>
+ </label>
+ <label>Visa Type
+ <select name="visaType" required>
+ <option value="">Select</option>
+ <option>Tourist</option>
+ <option>Business</option>
+ <option>Student</option>
+ <option>Work</option>
+ </select>
+ </label>
+ <label>Travel Date
+ <input type="date" name="travelDate" required>
+ </label>
+ <label class="full">Purpose of Visit
+ <textarea name="purpose" rows="3" placeholder="Conference, studies, family visit..." required></textarea>
+ </label>
+ <div class="full actions">
+ <button type="submit" class="pill primary">Submit Application</button>
+ <span class="microcopy">We simulate server-side validation and assign a tracking ID.</span>
+ </div>
+ </form>
+ </section>
+
+ <section id="upload" class="panel">
+ <div class="panel-header">
+ <div>
+ <p class="eyebrow">Step 2</p>
+ <h2>Upload Documents</h2>
+ <p class="microcopy">Select files to attach. This demo only stores file names and shows them in the UI.</p>
+ </div>
+ <div class="hint">Drag-and-drop not included to keep the code simple.</div>
+ </div>
+ <div class="uploader card">
+ <input type="file" id="file-input" multiple>
+ <p id="file-hint">No files chosen yet.</p>
+ <ul id="file-list"></ul>
+ </div>
+ </section>
+
+ <section id="status" class="panel">
+ <div class="panel-header">
+ <div>
+ <p class="eyebrow">Step 3</p>
+ <h2>Track Visa Status</h2>
+ <p class="microcopy">Each submission gets a tracking ID, status, and timeline. You can advance status to see UI changes.</p>
+ </div>
+ <div class="filters">
+ <label>Filter by visa type
+ <select id="filter-type">
+ <option value="all">All</option>
+ <option value="Tourist">Tourist</option>
+ <option value="Business">Business</option>
+ <option value="Student">Student</option>
+ <option value="Work">Work</option>
+ </select>
+ </label>
+ </div>
+ </div>
+ <div id="status-cards" class="cards"></div>
+ </section>
+
+ <section id="faq" class="panel">
+ <div class="panel-header">
+ <div>
+ <p class="eyebrow">Step 4</p>
+ <h2>FAQ</h2>
+ <p class="microcopy">Keep responses short and beginner-friendly.</p>
+ </div>
+ </div>
+ <div class="faq">
+ <details open>
+ <summary>Is this connected to a real backend?</summary>
+ <p>No. Everything runs in the browser with vanilla JavaScript for easy review.</p>
+ </details>
+ <details>
+ <summary>Where are my documents stored?</summary>
+ <p>Nowhere. Only the selected file names are displayed so reviewers can see the flow without uploads.</p>
+ </details>
+ <details>
+ <summary>How does status tracking work?</summary>
+ <p>Each submission gets a generated ID and starts at step 1. Click “Advance status” on a card to move it forward.</p>
+ </details>
+ <details>
+ <summary>Can I reset the sample data?</summary>
+ <p>Reload the page to clear everything or use the Load Demo Data button in the header.</p>
+ </details>
+ </div>
+ </section>
+ </main>
+
+ <footer class="footer">
+ <p>Built with plain HTML, CSS, and JavaScript for easy portfolio review.</p>
+ </footer>
+
+ <​script src="script.js"><​/script>
+</body>
+</html>
+ 
+
